@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style/style.css">
-  <link rel="stylesheet" href="style/script.js">
+
 </head>
 <body>
 
@@ -12,49 +12,8 @@
   <!-- Weather widgets will be added dynamically using JavaScript -->
 </div>
 
-<script>
-  // Sample weather data
-  const weatherData = [
-    { day: 'Monday', temperature: '25°C', icon: '☀️' },
-    { day: 'Tuesday', temperature: '22°C', icon: '⛅' },
-    { day: 'Wednesday', temperature: '18°C', icon: '🌧️' },
-    { day: 'Thursday', temperature: '20°C', icon: '⛈️' },
-    { day: 'Friday', temperature: '23°C', icon: '🌦️' },
-    { day: 'Saturday', temperature: '26°C', icon: '🌤️' },
-    { day: 'Sunday', temperature: '28°C', icon: '🌞' },
-  ];
 
-  // Function to create a weather widget
-  function createWeatherWidget(day, temperature, icon) {
-    const widget = document.createElement('div');
-    widget.className = 'weather-widget';
-
-    const dayElement = document.createElement('div');
-    dayElement.className = 'day';
-    dayElement.textContent = day;
-
-    const temperatureElement = document.createElement('div');
-    temperatureElement.className = 'temperature';
-    temperatureElement.textContent = temperature;
-
-    const iconElement = document.createElement('div');
-    iconElement.className = 'icon';
-    iconElement.textContent = icon;
-
-    widget.appendChild(dayElement);
-    widget.appendChild(temperatureElement);
-    widget.appendChild(iconElement);
-
-    return widget;
-  }
-
-  // Display weather widgets
-  const weatherContainer = document.getElementById('weather-container');
-  weatherData.forEach(({ day, temperature, icon }) => {
-    const widget = createWeatherWidget(day, temperature, icon);
-    weatherContainer.appendChild(widget);
-  });
-</script>
+<script src="style/script.js"></script>
 
 </body>
 </html>
